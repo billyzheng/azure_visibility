@@ -11,5 +11,5 @@
       register: all_regions
 
     - name: print var all_regions
-      debug:
+      ansible.builtin.debug:
         msg: "{{ all_regions }}"
