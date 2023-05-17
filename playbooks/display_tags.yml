@@ -18,6 +18,6 @@
           - name: "{{ item.name }}"
           - tags: "{{ item.tags }}"
           - power_state: "{{ item.power_state }}"
-      loop: retrieved_info.vms
+      loop: "{{ retrieved_info.vms | list }}"
       loop_control:
          label: "virtual machine info and associated tags"
