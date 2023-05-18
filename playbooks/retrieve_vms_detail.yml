@@ -11,10 +11,6 @@
 
     - name: print retrieved_info
       ansible.builtin.debug:
-        msg: "{{ retrieved_info }}"
-
-    - name: print retrieved_info
-      ansible.builtin.debug:
         msg: "There are {{ retrieved_info.vms | length }} virtual machine(s) that match your filter"
 
     - name: print tags
