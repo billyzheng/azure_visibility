@@ -22,3 +22,10 @@
       loop: "{{ retrieved_info.vms | list }}"
       loop_control:
          label: "virtual machine info and associated tags"
+
+    - name: save the instances to be used in a workflow variable for following job templates
+      ansible.builtin.set_stats:
+        data:
+          vm_name_list: "{{ retrieved_info.vms | map(attribute='name') | list }}"
+        per_host: false
+      when: retrieved_info.vms | length > 0
