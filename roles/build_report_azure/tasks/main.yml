@@ -56,7 +56,7 @@
 
 - name: print variables
   debug:
-    var: hostvars['10.0.0.5']
+    var: hostvars['ansible-1']
 
 - name: retrieve public IP address
   ansible.builtin.command: curl https://ifconfig.me
