@@ -8,7 +8,7 @@
         name: "../roles/retrieve_info_azure"
 
 - name: build report with facts
-  hosts:  10.0.0.5
+  hosts:  ansible-1
   gather_facts: true
   tasks:
 
